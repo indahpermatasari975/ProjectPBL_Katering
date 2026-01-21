@@ -1,0 +1,169 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    /* =======================================================
+       🎨 LIGHT MODE (Tema Pariwisata)
+       ======================================================= */
+    :root {
+        --primary: #0ea5e9;         /* biru laut */
+        --primary-hover: #0284c7;
+        --accent: #f97316;          /* orange sunset */
+        --bg-color: #f0f9ff;        /* biru pastel */
+        --text-color: #1e293b;
+        --header-bg: #ffffff;
+        --sidebar-bg: #ffffff;
+        --sidebar-border: #dbeafe;
+        --sidebar-link: #1e293b;
+        --sidebar-link-hover: #0284c7;
+        --sidebar-active-bg: #e0f2fe;
+        --sidebar-active-text: #0284c7;
+        --card-bg: #ffffff;
+        --footer-bg: #ffffff;
+    }
+
+    /* =======================================================
+       🌙 DARK MODE (Tema pantai malam)
+       ======================================================= */
+    body.dark {
+        --primary: #38bdf8;         /* biru neon lembut */
+        --primary-hover: #0ea5e9;
+        --accent: #fb923c;
+        --bg-color: #0f172a;        /* malam pantai */
+        --text-color: #e2e8f0;
+        --header-bg: #1e293b;
+        --sidebar-bg: #1e293b;
+        --sidebar-border: #334155;
+        --sidebar-link: #e2e8f0;
+        --sidebar-link-hover: #38bdf8;
+        --sidebar-active-bg: #1e3a8a;
+        --sidebar-active-text: #38bdf8;
+        --card-bg: #1e293b;
+        --footer-bg: #1e293b;
+    }
+
+    /* =======================================================
+       🌴 BODY & GLOBAL
+       ======================================================= */
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        min-height: 100vh;
+        transition: 0.35s ease-in-out;
+    }
+
+    /* =======================================================
+       🧭 SIDEBAR
+       ======================================================= */
+    .sidebar {
+        width: 240px;
+        background: var(--sidebar-bg);
+        border-right: 1px solid var(--sidebar-border);
+        padding-top: 20px;
+        position: fixed;
+        height: 100vh;
+    }
+
+    .sidebar a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--sidebar-link);
+        transition: 0.25s;
+        border-left: 4px solid transparent;
+    }
+
+    .sidebar a:hover {
+        background: var(--sidebar-active-bg);
+        color: var(--sidebar-link-hover);
+    }
+
+    .sidebar a.active {
+        background: var(--sidebar-active-bg);
+        color: var(--sidebar-active-text) !important;
+        border-left: 4px solid var(--primary);
+    }
+
+    /* =======================================================
+       🧩 MAIN CONTENT
+       ======================================================= */
+    .main {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* =======================================================
+       🔝 HEADER
+       ======================================================= */
+    header {
+        background: var(--header-bg);
+        color: var(--text-color);
+        padding: 15px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--sidebar-border);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    header .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--primary);
+    }
+
+    #toggleMode {
+        padding: 6px 15px;
+        background: var(--primary);
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    #toggleMode:hover {
+        background: var(--primary-hover);
+    }
+
+    /* =======================================================
+       📦 CARD
+       ======================================================= */
+    .content {
+        padding: 25px;
+    }
+
+    .card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        margin-bottom: 22px;
+        border-left: 5px solid var(--accent);
+    }
+
+    /* =======================================================
+       🔚 FOOTER
+       ======================================================= */
+    footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 12px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--sidebar-border);
+    }
+
+
+  
